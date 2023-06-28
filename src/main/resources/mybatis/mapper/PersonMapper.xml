@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lv.dao.mapper.PersonMapper">
+    <!--namespace根据自己需要创建的的mapper的路径和名称填写-->
+    <resultMap id="baseMap" type="com.lv.bean.Person"
+    >
+        <result column="id_card" property="idCard"></result>
+        <result column="name" property="name"></result>
+        <result column="sex" property="sex"></result>
+        <result column="age" property="age"/>
+    </resultMap>
+
+    <sql id="all-column">
+        id_card
+        ,name,sex,age
+    </sql>
+    <insert id="addPerson"></insert>
+    <update id="updatePerson"></update>
+    <delete id="delPerson"></delete>
+    <select id="selectPerson" resultType="com.lv.bean.Person">
+        select
+        <include refid="all-column"></include>
+        from person
+        <where>
+            <if test="null != idCard">
+                id_card = #{idCard}
+            </if>
+            <if test="null != name and ''!=name">
+                and name = #{name}
+            </if>
+            <if test="null != sex and ''!=sex">
+                and sex = #{sex}
+            </if>
+            <if test="null != age">
+                and age = #{age}
+            </if>
+        </where>
+    </select>
+</mapper>
