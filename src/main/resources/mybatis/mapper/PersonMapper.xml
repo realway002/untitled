@@ -14,10 +14,16 @@
         id_card
         ,name,sex,age
     </sql>
-    <insert id="addPerson"></insert>
+    <insert id="addPerson">
+        insert into person(id_card,name,sex,age) values (#{idCard},#{name},#{sex},#{age})
+    </insert>
     <update id="updatePerson"></update>
-    <delete id="delPerson"></delete>
-    <select id="selectPerson" resultType="com.lv.bean.Person">
+    <delete id="delPerson">
+        delete
+        from person
+        where id_card = #{idCard}
+    </delete>
+    <select id="selectPerson" resultMap="baseMap" parameterType="com.lv.bean.Person">
         select
         <include refid="all-column"></include>
         from person
