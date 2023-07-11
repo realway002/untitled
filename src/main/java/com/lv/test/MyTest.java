@@ -2,6 +2,8 @@ package com.lv.test;
 
 
 import com.lv.bean.Person;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -27,6 +29,13 @@ public class MyTest {
         Class<?> aClass = Class.forName("com.lv.bean.Person");
         System.out.println("getClass:"+perSonClass.getName());
         System.out.println("Class.forName:"+aClass.getName());
+
+    }
+
+    @Test
+    public void testJson() throws JSONException {
+        JSONObject jsonObject = new JSONObject("{\"ROOT\":{\"BODY\":{\"BUSI_INFO\":{\"pageSize\":10,\"pageNum\":1,\"condType\":null,\"condID\":null},\"OPR_INFO\":{\"loginNo\":\"gztest\"}}}}");
+        System.out.println(jsonObject.getInt("pageSize"));
 
     }
 }
