@@ -32,6 +32,6 @@ spring:
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
 
-files:
+file :
   upload:
-    path:'/uploadFile'
+    path: F:\\upload
