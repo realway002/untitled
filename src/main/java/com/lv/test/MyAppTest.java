@@ -5,11 +5,20 @@ import com.lv.bean.Person;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MyTest {
+
+//@SpringBootTest
+public class MyAppTest {
+
+    @Autowired
+    private RedisTemplate redisTemplate;
     @Test
     public void testMap(){
         String s1 = "hello";
@@ -34,8 +43,15 @@ public class MyTest {
 
     @Test
     public void testJson() throws JSONException {
-        JSONObject jsonObject = new JSONObject("{\"ROOT\":{\"BODY\":{\"BUSI_INFO\":{\"pageSize\":10,\"pageNum\":1,\"condType\":null,\"condID\":null},\"OPR_INFO\":{\"loginNo\":\"gztest\"}}}}");
-        System.out.println(jsonObject.getInt("pageSize"));
+        ValueOperations ops = redisTemplate.opsForValue();
+        ops.set("name","lvmh");
+        ops.set("age",11);
+    }
 
+    @Test
+    public void getRedis(){
+        ValueOperations ops = redisTemplate.opsForValue();
+        System.out.println(ops.get("name"+"11111111"));
+        System.out.println(ops.get("age"+"11111111"));
     }
 }

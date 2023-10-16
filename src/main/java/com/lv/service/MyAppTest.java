@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MyTest {
+public class MyAppTest {
 
 //    @Autowired
 //    private AsyncTestService asyncTestService;
