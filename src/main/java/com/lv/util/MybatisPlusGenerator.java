@@ -35,7 +35,7 @@ public class MybatisPlusGenerator {
 
             // 要生成代码的表名配置
             String[] tables = {
-                    "os_step_contact_info",//xxx表
+                    "os_brm_step_info",//xxx表
 
             };
 
