@@ -50,7 +50,7 @@
         <!-- 数据Model属性对应Column获取插件 -->
         <plugin type="com.itfsw.mybatis.generator.plugins.ModelColumnPlugin"/>
         <!-- Selective选择插入更新增强插件 -->
-        <plugin type="com.itfsw.mybatis.generator.plugins.SelectiveEnhancedP lugin"/>
+        <plugin type="com.itfsw.mybatis.generator.plugins.SelectiveEnhancedPlugin"/>
         <!-- 查询结果选择性返回插件 -->
         <plugin type="com.itfsw.mybatis.generator.plugins.SelectSelectivePlugin" />
 
@@ -101,7 +101,7 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <!--Start bs-->
-        <table tableName="os_brmsla_group_inst"
+        <table tableName="os_msg_alarm_inst"
                domainObjectName=""
                enableCountByExample="false"
                enableSelectByExample="false"

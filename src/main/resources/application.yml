@@ -19,10 +19,10 @@ logging:
     root: debug
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/untitledtest?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
+    driver-class-name: com.goldendb.jdbc.Driver
+    url: jdbc:goldendb://172.18.196.229:8880/oscomadm?useUnicode=true&characterEncoding=UTF-8&useSSL=false&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+    username: oscomadmopr
+    password: oscomadmopr1@3$
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
     host: 192.168.2.129

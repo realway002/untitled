@@ -18,11 +18,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //@EnableConfigurationProperties(LearnTimeJob.class)
 public class MyApplication {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext ap = new ClassPathXmlApplicationContext("appXml2.xml");
-        String[] beanDefinitionNames = ap.getBeanDefinitionNames();
-        for(String s1:beanDefinitionNames){
-            System.out.println(s1);
-        }
-//        SpringApplication.run(MyApplication.class,args);
+//        ClassPathXmlApplicationContext ap = new ClassPathXmlApplicationContext("appXml2.xml");
+//        String[] beanDefinitionNames = ap.getBeanDefinitionNames();
+//        for(String s1:beanDefinitionNames){
+//            System.out.println(s1);
+//        }
+        SpringApplication.run(MyApplication.class,args);
     }
 }
