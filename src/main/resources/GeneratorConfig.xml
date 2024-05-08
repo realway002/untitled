@@ -64,6 +64,7 @@
                         connectionURL="jdbc:mysql://172.18.196.229:8880/oscomadm?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
                         userId="oscomadmopr"
                         password="oscomadmopr1@3$">
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <!--<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
                         connectionURL="jdbc:mysql://192.168.45.88:8166/accept_homedb?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
@@ -101,10 +102,10 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <!--Start bs-->
-        <table tableName="os_msg_alarm_inst"
+        <table tableName="os_dispatch_note_info"
                domainObjectName=""
                enableCountByExample="false"
-               enableSelectByExample="false"
+               enableSelectByExample="true"
                selectByExampleQueryId="false"
                enableInsert="true">
         </table>
