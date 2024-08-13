@@ -61,9 +61,9 @@
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://172.18.196.229:8880/oscomadm?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
-                        userId="oscomadmopr"
-                        password="oscomadmopr1@3$">
+                        connectionURL="jdbc:mysql://172.18.196.229:8880/idopdb?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
+                        userId="idopopr"
+                        password="idopopr12$#">
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <!--<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
@@ -102,7 +102,7 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <!--Start bs-->
-        <table tableName="os_dispatch_note_info"
+        <table tableName="os_msg_alarm_insthis"
                domainObjectName=""
                enableCountByExample="false"
                enableSelectByExample="true"
