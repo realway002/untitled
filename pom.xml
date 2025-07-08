@@ -64,6 +64,11 @@
             <version>2.2.0</version>
         </dependency>
         <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.1.9</version>
@@ -130,6 +135,11 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.panweidb</groupId>
+            <artifactId>panweidb-jdbc</artifactId>
+            <version>2.0.0</version>
         </dependency>
 
 
@@ -201,6 +211,17 @@
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
                         <version>8.0.28</version>
+                    </dependency>
+<!--                    oracle依赖-->
+                    <dependency>
+                        <groupId>oracle</groupId>
+                        <artifactId>ojdbc6</artifactId>
+                        <version>11.2.0.3</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.panweidb</groupId>
+                        <artifactId>panweidb-jdbc</artifactId>
+                        <version>2.0.0</version>
                     </dependency>
                     <dependency>
                         <groupId>com.itfsw</groupId>

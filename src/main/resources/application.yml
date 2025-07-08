@@ -32,6 +32,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
 
+## 指定文件上传根路径
 file :
   upload:
-    path: F:\\upload
+    path: D:\lvmh\file
+  accept:
+    root-path: D:\lvmh\file

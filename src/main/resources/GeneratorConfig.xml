@@ -12,8 +12,8 @@
         <!-- 生成的Java文件的编码 -->
         <property name="javaFileEncoding" value="utf-8" />
         <!-- beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号； -->
-        <property name="beginningDelimiter" value="`" />
-        <property name="endingDelimiter" value="`" />
+        <property name="beginningDelimiter" value="" />
+        <property name="endingDelimiter" value="" />
         <!-- 格式化java代码 -->
         <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
         <!-- 格式化XML代码 -->
@@ -23,10 +23,10 @@
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
         <plugin type="com.itfsw.mybatis.generator.plugins.SelectOneByExamplePlugin"/>
         <!-- MySQL分页插件 -->
-        <plugin type="com.itfsw.mybatis.generator.plugins.LimitPlugin">
-            <!-- 通过配置startPage影响Example中的page方法开始分页的页码，默认分页从0开始 -->
-            <property name="startPage" value="1"/>
-        </plugin>
+<!--        <plugin type="com.itfsw.mybatis.generator.plugins.LimitPlugin">-->
+<!--            &lt;!&ndash; 通过配置startPage影响Example中的page方法开始分页的页码，默认分页从0开始 &ndash;&gt;-->
+<!--            <property name="startPage" value="1"/>-->
+<!--        </plugin>-->
         <!-- 数据Model链式构建插件 -->
         <plugin type="com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin"/>
         <!-- Example Criteria 增强插件 -->
@@ -40,13 +40,13 @@
         <!--<property name="targetPackage" value="com.itfsw.mybatis.generator.dao.example"/>-->
         <!--</plugin>-->
         <!-- 批量插入插件 -->
-        <plugin type="com.itfsw.mybatis.generator.plugins.BatchInsertPlugin">
-            <!--
-            开启后可以实现官方插件根据属性是否为空决定是否插入该字段功能
-            ！需开启allowMultiQueries=true多条sql提交操作，所以不建议使用！插件默认不开启
-            -->
-            <property name="allowMultiQueries" value="false"/>
-        </plugin>
+<!--        <plugin type="com.itfsw.mybatis.generator.plugins.BatchInsertPlugin">-->
+<!--            &lt;!&ndash;-->
+<!--            开启后可以实现官方插件根据属性是否为空决定是否插入该字段功能-->
+<!--            ！需开启allowMultiQueries=true多条sql提交操作，所以不建议使用！插件默认不开启-->
+<!--            &ndash;&gt;-->
+<!--            <property name="allowMultiQueries" value="false"/>-->
+<!--        </plugin>-->
         <!-- 数据Model属性对应Column获取插件 -->
         <plugin type="com.itfsw.mybatis.generator.plugins.ModelColumnPlugin"/>
         <!-- Selective选择插入更新增强插件 -->
@@ -60,19 +60,25 @@
             <!--<property name="suppressDate" value="true" /> &lt;!&ndash; 是否生成注释代时间戳&ndash;&gt;-->
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@10.243.208.57:1521:actcase"
+                        userId="dbiomad"
+                        password="dbiomad123">
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>-->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://172.18.196.229:8880/idopdb?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
-                        userId="idopopr"
-                        password="idopopr12$#">
+                        connectionURL="jdbc:mysql://10.88.204.251:8172/iomdb_zx?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
+                        userId="iomdb_zx"
+                        password="iomdb_zx123456$#@!">
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
-        <!--<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.45.88:8166/accept_homedb?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=true"
-                        userId="accept_home"
-                        password="accept_home">
+<!--        <jdbcConnection driverClass="org.panweidb.Driver"
+                        connectionURL="jdbc:panweidb://10.88.154.217:18820/idopdb?characterEncoding=utf-8"
+                        userId="idopopr"
+                        password="idopopr!21">
         </jdbcConnection>-->
-        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
-            NUMERIC 类型解析为java.math.BigDecimal -->
+        <!-- 默认false，把JDBC DECIMAL 和 BIGINT 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+            BIGINT 类型解析为java.math.BigDecimal -->
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
@@ -87,7 +93,7 @@
         </javaModelGenerator>
 
         <!-- targetProject:mapper映射文件生成的位置 -->
-        <sqlMapGenerator targetPackage="mysql-mybatismapper"
+        <sqlMapGenerator targetPackage="panwei-mybatismapper"
                          targetProject="src/main/resources">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
@@ -102,13 +108,34 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <!--Start bs-->
-        <table tableName="os_msg_alarm_insthis"
+        <table tableName="td_sql_cfg"
+               domainObjectName=""
+               enableCountByExample="true"
+               enableSelectByExample="true"
+               selectByExampleQueryId="false"
+               enableInsert="true">
+        </table>
+        <table tableName="td_area_sql_rel"
                domainObjectName=""
                enableCountByExample="false"
                enableSelectByExample="true"
                selectByExampleQueryId="false"
                enableInsert="true">
         </table>
+        <table tableName="td_menu_area_rel"
+               domainObjectName=""
+               enableCountByExample="false"
+               enableSelectByExample="true"
+               selectByExampleQueryId="false"
+               enableInsert="true">
+        </table>
+        <!--<table tableName="td_prod_prc_rel"
+               domainObjectName=""
+               enableCountByExample="false"
+               enableSelectByExample="true"
+               selectByExampleQueryId="false"
+               enableInsert="true">
+        </table>-->
 
 
         <!-- 有些表的字段需要指定java类型
