@@ -2,19 +2,15 @@ package com.lv.test;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.lv.bean.Person;
+import com.lv.bean.entity.Person;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 
 //@SpringBootTest
@@ -38,7 +34,7 @@ public class MyAppTest {
     public void testReflect() throws ClassNotFoundException {
         Person perSon = new Person();
         Class perSonClass = perSon.getClass();
-        Class<?> aClass = Class.forName("com.lv.bean.Person");
+        Class<?> aClass = Class.forName("com.lv.bean.entity.Person");
         System.out.println("getClass:"+perSonClass.getName());
         System.out.println("Class.forName:"+aClass.getName());
 

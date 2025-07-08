@@ -1,6 +1,6 @@
-package com.lv.util;
+package com.lv.common.utils.parseObj;
 
-import com.lv.bean.ParamInfo;
+import com.lv.bean.bo.ParamInfo;
 import org.springframework.util.StringUtils;
 
 

@@ -1,6 +1,6 @@
 package com.lv.service.impl;
 
-import com.lv.bean.Person;
+import com.lv.bean.entity.Person;
 import com.lv.dao.mapper.PersonMapper;
 import com.lv.service.IPersonDealService;
 import com.lv.service.IPersonQuery;

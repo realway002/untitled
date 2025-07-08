@@ -1,7 +1,6 @@
-package com.lv.bean;
+package com.lv.bean.entity;
 
 import lombok.Data;
-import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
 

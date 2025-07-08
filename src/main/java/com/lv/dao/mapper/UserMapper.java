@@ -1,6 +1,6 @@
 package com.lv.dao.mapper;
 
-import com.lv.bean.User;
+import com.lv.bean.entity.User;
 import org.springframework.stereotype.Repository;
 
 @Repository

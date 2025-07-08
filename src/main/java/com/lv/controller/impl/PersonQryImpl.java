@@ -1,9 +1,8 @@
 package com.lv.controller.impl;
 
-import com.lv.bean.Person;
+import com.lv.bean.entity.Person;
 import com.lv.controller.IPersonQry;
 import com.lv.service.IPersonQuery;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

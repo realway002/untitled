@@ -1,4 +1,4 @@
-package com.lv.bean;
+package com.lv.bean.entity;
 
 import lombok.Data;
 

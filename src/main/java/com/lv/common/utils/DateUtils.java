@@ -1,4 +1,4 @@
-package com.lv.uitls;
+package com.lv.common.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

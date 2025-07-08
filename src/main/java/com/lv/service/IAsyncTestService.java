@@ -1,6 +1,6 @@
 package com.lv.service;
 
-import com.lv.bean.Person;
+import com.lv.bean.entity.Person;
 
 import java.util.concurrent.Future;
 

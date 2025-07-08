@@ -1,4 +1,4 @@
-package com.lv.uitls.project;
+package com.lv.common.utils.project;
 
 import lombok.Data;
 

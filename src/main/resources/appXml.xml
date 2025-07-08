@@ -5,6 +5,6 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--声明自定义bean-->
     <bean id="person"
-          class="com.lv.bean.Person"
+          class="com.lv.bean.entity.Person"
           scope="singleton"/>
 </beans>

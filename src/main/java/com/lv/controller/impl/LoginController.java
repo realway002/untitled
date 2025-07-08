@@ -1,6 +1,6 @@
 package com.lv.controller.impl;
 
-import com.lv.bean.User;
+import com.lv.bean.entity.User;
 import com.lv.common.utils.GResponse;
 import com.lv.common.utils.TokenUtils;
 import com.lv.controller.ILoginController;

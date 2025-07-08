@@ -1,7 +1,7 @@
 package com.lv;
 
 import com.alibaba.excel.EasyExcel;
-import com.lv.bean.Student;
+import com.lv.bean.entity.Student;
 import com.lv.common.utils.CreateDataUtil;
 import com.lv.handler.ContentStyleHandler;
 import com.lv.handler.CustomSheetHandler;

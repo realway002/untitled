@@ -1,8 +1,6 @@
-package com.lv.bean;
+package com.lv.bean.entity;
 
 import com.alibaba.excel.annotation.ExcelProperty;
-import com.alibaba.excel.annotation.write.style.ContentStyle;
-import com.alibaba.excel.enums.BooleanEnum;
 import lombok.Data;
 
 /**

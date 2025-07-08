@@ -1,6 +1,6 @@
 package com.lv.controller;
 
-import com.lv.bean.User;
+import com.lv.bean.entity.User;
 import com.lv.common.utils.GResponse;
 
 import javax.servlet.http.HttpServletRequest;

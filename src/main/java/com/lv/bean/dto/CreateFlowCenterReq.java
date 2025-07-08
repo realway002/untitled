@@ -1,4 +1,4 @@
-package com.lv.bean;
+package com.lv.bean.dto;
 
 import com.lv.parser.absParser.AbsCreateFlowCenterParser;
 import org.junit.jupiter.api.Test;

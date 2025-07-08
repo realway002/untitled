@@ -1,7 +1,6 @@
 package com.lv.service.impl;
 
-import com.alibaba.druid.util.StringUtils;
-import com.lv.bean.Person;
+import com.lv.bean.entity.Person;
 import com.lv.dao.mapper.PersonMapper;
 import com.lv.service.IPersonQuery;
 import org.springframework.beans.factory.annotation.Autowired;

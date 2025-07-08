@@ -1,13 +1,11 @@
 package com.lv.service.impl;
 
 import com.alibaba.druid.util.StringUtils;
-import com.lv.bean.User;
+import com.lv.bean.entity.User;
 import com.lv.dao.mapper.UserMapper;
 import com.lv.service.ILoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class LoginService implements ILoginService {

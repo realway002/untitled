@@ -1,6 +1,6 @@
 package com.lv.service.impl;
 
-import com.lv.bean.Person;
+import com.lv.bean.entity.Person;
 import com.lv.service.IAsyncTestService;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.util.DateUtil;

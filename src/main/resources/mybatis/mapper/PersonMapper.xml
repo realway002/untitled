@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.lv.dao.mapper.PersonMapper">
     <!--namespace根据自己需要创建的的mapper的路径和名称填写-->
-    <resultMap id="baseMap" type="com.lv.bean.Person"
+    <resultMap id="baseMap" type="com.lv.bean.entity.Person"
     >
         <result column="id_card" property="idCard"></result>
         <result column="name" property="name"></result>
@@ -23,7 +23,7 @@
         from person
         where id_card = #{idCard}
     </delete>
-    <select id="selectPerson" resultMap="baseMap" parameterType="com.lv.bean.Person">
+    <select id="selectPerson" resultMap="baseMap" parameterType="com.lv.bean.entity.Person">
         select
         <include refid="all-column"></include>
         from person
